@@ -1,0 +1,112 @@
+practica con objetos y variables
+var oriana = {
+  ojos: "azules", //cuando la propiedad no tiene espacios no necesita comillas
+  cabello:"castaño",
+  piel:"white",
+  ropa:["chamarra gris", "pantalon negro"],
+  peso: `25 kg`,
+  "canal de YT": "oridemierda",// cuando la propiedad tiene espacios necesita comillas
+  corazon: "oscuro"
+};
+
+//aunque no tenga comillas la propiedad aqui si debe llevarla
+var propiedad = "ojos";
+		console.log(oriana[propiedad]);
+var propiedad = "cabello";
+		console.log(oriana[propiedad]);
+var propiedad = "piel";
+		console.log(oriana[propiedad]);
+var propiedad = "peso";
+		console.log(oriana[propiedad]);
+
+oriana.tenis = "nike"//agregar esta nueva propiedad al objeto
+
+var propiedad = "tenis";
+		console.log(oriana[propiedad]);
+
+console.log(oriana.ojos);
+console.log(oriana.cabello);
+console.log(oriana.piel);
+console.log(oriana.peso);
+console.log(oriana["canal de YT"]);
+console.log(oriana.tenis);
+console.log(oriana.ropa);
+oriana.ropa.push("chaqueta de cuero");//agregar esta nueva propiedad al array
+console.log(oriana.ropa);
+oriana.ropa = ["falda", "chaqueta", "shirt", "lentes"]//agregar propiedad nueva al array
+console.log(oriana.corazon);
+delete oriana.corazon;
+console.log(oriana.corazon);
+
+function verificarPropiedad (obj, propiedad){
+  if (obj.hasOwnProperty(propiedad)){
+    return `${propiedad} ${obj[propiedad]}`
+  } else {
+    return "Este objeto no tiene alguna propiedad llamada: " + propiedad
+  }
+}
+console.log(verificarPropiedad(oriana,"ojos"));
+console.log(verificarPropiedad(oriana,"cabello"));
+console.log(verificarPropiedad(oriana,"piel"));
+console.log(verificarPropiedad(oriana,"ropa"));
+console.log(verificarPropiedad(oriana,"peso"));
+console.log(verificarPropiedad(oriana,"canal de YT"));
+console.log(verificarPropiedad(oriana,"corazon"));
+console.log(verificarPropiedad(oriana,"cara"));
+
+function orianaPropiedades(propiedad){
+  var buscarPropiedad = ""
+  
+  switch(propiedad) {
+    case "ojos":
+    buscarPropiedad = "Azules";
+    	break;
+    case "cabello":
+    buscarPropiedad = "Castaño";
+    	break;
+    case "piel":
+    buscarPropiedad = "Blanca"
+      break;
+    case "ropa":
+    buscarPropiedad = `Shirt gris, Pantalon jean y Chaqueta de Cuero`
+    	break;
+    case "peso":
+    buscarPropiedad = "25 kg"
+      break;
+    case "canal de YT":
+    buscarPropiedad = "Oridemierda"
+      break;
+    case "corazon":
+    buscarPropiedad = "Oscuro"
+      break;
+  }
+  return buscarPropiedad;
+}
+console.log(orianaPropiedades("ojos"));
+console.log(orianaPropiedades("cabello"));
+console.log(orianaPropiedades("piel"));
+console.log(orianaPropiedades("ropa"));
+console.log(orianaPropiedades("peso"));
+console.log(orianaPropiedades("canal de YT"));
+console.log(orianaPropiedades("corazon"));
+
+function orianaPropiedades(propiedad){
+  var oriana = {
+  ojos: "azules", 
+  cabello:"castaño",
+  piel:"blanca",
+  ropa:`Shirt gris, Pantalon jean y Chaqueta de Cuero`,
+  peso: `25 kg`,
+  "canal de YT": "oridemierda",
+  corazon: "oscuro"
+	
+  };
+  return oriana[propiedad];
+};
+console.log(orianaPropiedades("ojos"));
+console.log(orianaPropiedades("cabello"));
+console.log(orianaPropiedades("piel"));
+console.log(orianaPropiedades("ropa"));
+console.log(orianaPropiedades("peso"));
+console.log(orianaPropiedades("canal de YT"));
+console.log(orianaPropiedades("corazon"));
