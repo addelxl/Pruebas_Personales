@@ -1,0 +1,85 @@
+//objetos complejos, array con objetos, que dentro tienen array, como acceder a cada dato:
+  var carrosAviable = [
+    {
+  marca: "Challenger", 
+  modelo:"Demon",
+  motor:"HEMI",
+  gomas:"Long Island Pro Tires",
+  peso: 478 + " lbs",
+  valor: "$USD " + 100.000,
+  general:["Carroseria roja", 456 + " lg", "Interior de Cuero Integral"]
+	},
+    
+  {
+  marca: "Doge Challenger", 
+  modelo:"ShakeDown",
+  motor:"HEMI-Viper",
+  gomas:"Hellcat Pro Tires",
+  peso: 386 + " lbs",
+  valor: "$USD " + 85000,
+  general:["Carroseria Negra Mate", 424 + " lg", "Interior Original de Viper"]
+	}
+    
+               ]
+
+console.log(carrosAviable[0].marca);
+console.log(carrosAviable[1].valor);
+console.log(carrosAviable[0].general);
+console.log(carrosAviable[1].motor);
+console.log(carrosAviable[1].general);
+console.log(carrosAviable[1].modelo);
+
+var chicks = [
+  {mili: "hot",
+   cualidades:[
+     "buen culo",
+     "tetas decentes",
+     "boca chula",
+     "personalidad"
+   ]
+   },
+  {
+    yilian:"hot tottie",
+    cualidades:[
+      "buen culo",
+      "buena piel",
+      "carita bonita",
+      "poppy"
+    ]
+  }
+]
+console.log(chicks[1].cualidades)
+
+//notacion de corchetes cuando el nombre de la propiedad tiene espacios
+//notacion de puntos, cuando el nombre de la propiedad no tiene espacios
+//cuando se trata de usar variables solo podemos usar notacion de corchetes
+
+var Guitarra = {
+  "Color": "blanco y negro",
+  "año": 1997,
+  "cuerdas": "si",
+}
+
+function verificarPro(obj, propiedad){
+  if (obj.hasOwnProperty(propiedad)){
+    return "propiedad: " + obj[propiedad];
+  } else {return "este objeto no tiene esta propiedad";}
+}
+
+console.log(verificarPro(Guitarra,"Color"));
+console.log(verificarPro(Guitarra,"numero"));
+
+var mochila = {
+  color: "verde",
+  marca: "random",
+  contenido: ["libro", "termo", "laptop"],
+};
+
+console.log(mochila.contenido);
+console.log(mochila.color)
+mochila.color = "red"
+console.log(mochila.color)
+mochila.contenido.push("lapiz")
+console.log(mochila.contenido);
+delete mochila.marca;
+console.log(mochila);
